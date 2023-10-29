@@ -23,65 +23,7 @@ import java.util.Properties;
 @Component
 @RequiredArgsConstructor
 public class MailUtil {
-    //
-//    @Value("${tangdou.isSSL:}")
-//    private boolean isSSL;//使用SSL加密
-//
-//    @Value("${tangdou.host:}")
-//    private String host;//QQ邮箱的pop3服务器
-//
-//    @Value("${tangdou.port:}")
-//    private int port;//端口
-//
-//    @Value("${tangdou.username:}")
-//    private String username;//邮件名
-//
-//    @Value("${tangdou.password:}")
-//    private String password;//密码
-//
-//    @Value("${tangdou.pop3.protocol:}")
-//    private String protocol;//使用pop3协议
-//
-//    @Value("${tangdou.dir:}")
-//    private String DIR;//附件存放地址
-//
-//    @Value("${tangdou.sendaddress:}")
-//    private String sendAddress;//收件人地址
-//
     private final MailReceiveConfig mailReceiveConfig;
-//
-//    /**
-//     * 发送邮件
-//     * */
-//    public void sendMail() throws Exception{
-//        Properties properties = new Properties();
-//        properties.put("mail.transport.protocol", "smtp");// 连接协议
-//        properties.put("mail.smtp.host", "smtp.exmail.qq.com");// 主机名
-//        properties.put("mail.smtp.port", 465);// 端口号
-//        properties.put("mail.smtp.auth", "true");
-//        properties.put("mail.smtp.ssl.enable", "true");// 设置是否使用ssl安全连接 ---一般都使用
-//        properties.put("mail.debug", "true");// 设置是否显示debug信息 true 会在控制台显示相关信息
-//        // 得到回话对象
-//        Session session = Session.getInstance(properties);
-//        // 获取邮件对象
-//        Message message = new MimeMessage(session);
-//        // 设置发件人邮箱地址
-//        message.setFrom(new InternetAddress("liujt@tangdou.com"));
-//        // 设置收件人地址
-//        message.setRecipients(
-//                MimeMessage.RecipientType.TO,
-//                new InternetAddress[] { new InternetAddress(sendAddress) });//867742652@qq.com
-//        // 设置邮件标题
-//        message.setSubject("hello");
-//        // 设置邮件内容
-//        message.setText("哈哈哈哈哈");
-//        // 得到邮差对象
-//        Transport transport = session.getTransport();
-//        // 连接自己的邮箱账户
-//        transport.connect(username, password);// 密码为刚才得到的授权码
-//        // 发送邮件
-//        transport.sendMessage(message, message.getAllRecipients());
-//    }
 
     /**
      * 接收当日邮件邮件
