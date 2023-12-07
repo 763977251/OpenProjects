@@ -26,6 +26,38 @@ public class MailUtil {
     private final MailReceiveConfig mailReceiveConfig;
 
     /**
+     * 发送邮件
+     * */
+    public void sendMail() throws Exception{
+        Properties properties = new Properties();
+        properties.put("mail.transport.protocol", "smtp");// 连接协议
+        properties.put("mail.smtp.host", "smtp.email.qq.com");// 主机名
+        properties.put("mail.smtp.port", 465);// 端口号
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.ssl.enable", "true");// 设置是否使用ssl安全连接 ---一般都使用
+        properties.put("mail.debug", "true");// 设置是否显示debug信息 true 会在控制台显示相关信息
+        // 得到回话对象
+        Session session = Session.getInstance(properties);
+        // 获取邮件对象
+        Message message = new MimeMessage(session);
+        // 设置发件人邮箱地址
+        message.setFrom(new InternetAddress("liujt@tangdou.com"));
+        // 设置收件人地址
+        message.setRecipients(
+                MimeMessage.RecipientType.TO,
+                new InternetAddress[] { new InternetAddress(mailReceiveConfig.getUserName()) });//
+        // 设置邮件标题
+        message.setSubject("hello");
+        // 设置邮件内容
+        message.setText("哈哈哈哈哈");
+        // 得到邮差对象
+        Transport transport = session.getTransport();
+        // 连接自己的邮箱账户
+        transport.connect(mailReceiveConfig.getUserName(), mailReceiveConfig.getPassWord());// 密码为刚才得到的授权码
+        // 发送邮件
+        transport.sendMessage(message, message.getAllRecipients());
+    }
+    /**
      * 接收当日邮件邮件
      */
     public void receive() {
