@@ -27,4 +27,20 @@ public class EmailController {
         }
     }
 
+
+    /**
+     * 邮件发送触发接口
+     * @return
+     */
+    @PostMapping("/sendEmail")
+    public String sendEmail() {
+        try {
+            mailUtil.sendMail();
+            return "发送邮件成功";
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "发送邮件方失败";
+        }
+    }
+
 }
