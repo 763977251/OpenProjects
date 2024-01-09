@@ -1,7 +1,7 @@
 # 项目说明
 ## 项目说明
 - 在pom.xml文件中添加相关依赖
-```xml
+```js
 <dependency>
     <groupId>org.projectlombok</groupId>
     <artifactId>lombok</artifactId>
