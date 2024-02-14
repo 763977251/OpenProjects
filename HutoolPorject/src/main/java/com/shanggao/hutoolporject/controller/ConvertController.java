@@ -16,6 +16,10 @@ public class ConvertController {
 
 	private final ConvertService convertService;
 
+	/**
+	 * 字符串转Date
+	 * @param dateStr
+	 */
 	@GetMapping("/hutool/convert/date")
 	public void convertDate(String dateStr) {
 		convertService.toDate(dateStr);
