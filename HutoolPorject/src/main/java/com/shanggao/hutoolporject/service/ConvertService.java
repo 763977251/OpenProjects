@@ -3,6 +3,7 @@ package com.shanggao.hutoolporject.service;
 import cn.hutool.core.convert.Convert;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -20,5 +21,11 @@ public class ConvertService {
 	public void toDate(String dateStr) {
 		Date date = Convert.toDate(dateStr);
 		System.out.println(date);
+
+		LocalDateTime localDateTime = Convert.toLocalDateTime(date);
+		System.out.println(localDateTime);
+
+		Date date1 = Convert.toDate(localDateTime);
+		System.out.println(date1);
 	}
 }
