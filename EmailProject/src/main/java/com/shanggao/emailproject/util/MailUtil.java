@@ -70,6 +70,7 @@ public class MailUtil {
         props.setProperty("mail.imap.host", mailReceiveConfig.getHost());
         // 需要请求认证
         props.setProperty("mail.imap.auth", String.valueOf(mailReceiveConfig.getIsSSL()));
+        props.setProperty("mail.imap.ssl.enable", String.valueOf(mailReceiveConfig.getIsSSL()));
 
         Session session = Session.getDefaultInstance(props);
         Store store = null;
