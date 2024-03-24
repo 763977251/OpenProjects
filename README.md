@@ -8,3 +8,7 @@
 ### Hutool工具类相关项目HutoolProject
 - 使用Hutool工具类框架解析字符串格式的时间
 - Date与LocalDateTime之间相互转换
+### MybatisPlus项目MybatisPlusProject
+- MP的简单使用
+- MP的代码生成查询Mybatis-X使用
+- Mybatis-X插件生成代码模板修改
