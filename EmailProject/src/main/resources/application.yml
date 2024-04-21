@@ -11,7 +11,7 @@ mail:
         port: 993
         #接收邮件号
         userName: XXXXXXX@qq.com
-        #密码
+        #密码（授权码）
         passWord: XXXXXXXXXXXXXX
         #附件下载存储地址
         attachmentDir: XXXXXXXX
