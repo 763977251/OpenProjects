@@ -19,7 +19,7 @@ public class MailReceiveConfig {
      */
     private String userName;
     /**
-     * 密码传授权码
+     * 密码（授权码）
      */
     private String passWord;
     private String attachmentDir;
