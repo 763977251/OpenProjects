@@ -4,14 +4,14 @@ spring:
 server:
     port: 9006
 mail:
-    #??????
+    #邮件接收配置
     receive:
         isSSL: true
         host: imap.qq.com
         port: 993
-        #??????
+        #接收邮件号
         userName: XXXXXXX@qq.com
-        #??????
+        #密码
         passWord: XXXXXXXXXXXXXX
-        #??????
+        #附件下载存储地址
         attachmentDir: XXXXXXXX
