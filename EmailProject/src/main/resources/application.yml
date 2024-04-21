@@ -2,16 +2,16 @@ spring:
     application:
         name: EmailProject
 server:
-    port: 9006
+  port: 9006
 mail:
+  #??????
+  receive:
+    isSSL: true
+    host: imap.qq.com
+    port: 993
     #??????
-    receive:
-        isSSL: true
-        host: imap.qq.com
-        port: 993
-        #??????
-        userName: XXXXXXX@qq.com
-        #??????
-        passWord: XXXXXXXXXXXXXX
-        #??????
-        attachmentDir: XXXXXXXX
+    userName: XXXXXXX@qq.com
+    #??????
+    passWord: XXXXXXXXXXXXXX
+    #??????
+    attachmentDir: XXXXXXXX
