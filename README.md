@@ -10,5 +10,5 @@
 - Date与LocalDateTime之间相互转换
 ### MybatisPlus项目MybatisPlusProject
 - MP的简单使用
-- MP的代码生成查询Mybatis-X使用
+- MP的代码生成插件Mybatis-X使用
 - Mybatis-X插件生成代码模板修改
