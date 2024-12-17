@@ -50,7 +50,7 @@ class HutoolPorjectApplicationTests {
 				paramMap.put("LINENAME", map.get("LINENAME"));
 				paramMap.put("OPTIMIZATIONNO", map.get("OPTIMIZATIONNO"));
 				paramMap.put("OPTIMIZATIONNOSEQ", map.get("OPTIMIZATIONNOSEQ"));
-				String body = HttpUtil.post("http://10.107.1.35:31300/materialpick/materialConsumeReport", JSONUtil.toJsonStr(paramMap));
+				String body = HttpUtil.post("URL", JSONUtil.toJsonStr(paramMap));
 //				String body = HttpRequest.of("http://127.0.0.1:17878/materialpick/materialConsumeReport")
 //						.body(JSONUtil.toJsonStr(paramMap)).execute().body();
 				System.out.println(index++ + body);
