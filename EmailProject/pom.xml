@@ -53,6 +53,19 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <!-- 配置 maven-source-plugin 来打包源代码 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>  <!-- 生成带源代码的 JAR 文件 -->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
