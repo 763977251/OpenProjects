@@ -24,4 +24,13 @@ public class ConvertController {
 	public void convertDate(String dateStr) {
 		convertService.toDate(dateStr);
 	}
+
+	/**
+	 * 金额转大写
+	 * @param digitStr
+	 */
+	@GetMapping("/hutool/convert/digitToChinese")
+	public void digitToChinese(String digitStr) {
+		convertService.digitToChinese(digitStr);
+	}
 }

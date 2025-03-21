@@ -28,4 +28,15 @@ public class ConvertService {
 		Date date1 = Convert.toDate(localDateTime);
 		System.out.println(date1);
 	}
+
+	/**
+	 * 金额转大写
+	 * @param dateStr
+	 */
+	public void digitToChinese(String dateStr) {
+		double a = 67556.32;
+		//结果为："陆万柒仟伍佰伍拾陆元叁角贰分"
+		String digitUppercase = Convert.digitToChinese(a);
+		System.out.println(digitUppercase);
+	}
 }
